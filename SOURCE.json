@@ -1,0 +1,25 @@
+{
+  "source_repository": "https://github.com/justgook/gamectl",
+  "source_base_revision": "01bbfb1cb07bca898b86e7127cf433d2d23aaf7e",
+  "snapshot_kind": "working-tree source snapshot; no history rewritten",
+  "source_worktree_status": [],
+  "repository": "plugin.layout",
+  "files_sha256": {
+    ".github/workflows/verify.yml": "fd105ca89d22245e71a0d69fbc43bf2f8b5e562b03a804e41a518acbc9424de2",
+    ".gitignore": "12be7d69664589a1ea44ea4f46b2ea1924d33dac8c474a4f7d2778a8ee9201ea",
+    "CONTEXT.md": "4aef08d1f41456cbfc2b711fea791df69652d0ad3317569c91230fba8167cf78",
+    "LICENSING.md": "d4b79d8b9ed3c42813d51368fef1ce1f441948b217977ab839e10b23b0262318",
+    "Makefile": "28a29e84465a5b6b812e1e7f31169d018b395b3365604fb5cb18072616a9e0e7",
+    "PREPARATION.md": "dd9270285e0addcbeaf5b71b44c44fdf97a4a299c35ccfe75c3cc089f3ede969",
+    "README.md": "8c6e27d4ae5ea749033d49e486390861784e94b1d8cb9a3f229814120553ea9d",
+    "config.mk": "841d90bc298f80221d5e24e1a2db128996f48795e6e6180d386992bf1b6f3a3f",
+    "flake.lock": "3adbe3447e662145dd50a383489f62e7bfbe16996281e113b1fbac347eca3eae",
+    "flake.nix": "dc616710d20453379b4c436d06c56a45bf9bf2ae322638fe448f930bc138112f",
+    "package-lock.json": "c9fc04d53f3fcc0bb23b7ee4ec109e70138f6955de98db551548182604c86115",
+    "package.json": "b5ed096a1567e97010770366cbf9f0949b91342ea886aa686025e2ec2ce54374",
+    "src/component.c": "8df2e88528b655546dc4e4133924edb6c1bf063df90ede6a835e2c8e65b8fa6a",
+    "src/plugin.mk": "abd7804d6ee8f20e50a663a2d41829d090a3edc0299db86650542e2743ea2eb6",
+    "src/wit/package.wit": "23442c7ec0f4a3ba810b4accf0520075de0ec32c5ee84d685c8b809f23c0daa7",
+    "test/e2e.mjs": "d9882332e57d0c49aab45fd24113fb2fbaa46863996913ee3c4651274eae5df3"
+  }
+}
