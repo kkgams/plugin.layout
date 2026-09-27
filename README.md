@@ -13,5 +13,5 @@ nix develop --command make test
 The test directly invokes the transpiled component and checks initialization,
 resize, and invalid input handling. Build output is `dist/plugin.layout.wasm`.
 
-No release/publish automation is included. See `LICENSING.md` and
+A fail-closed release pipeline scaffold is included; see `PUBLISHING.md`. No licensing texts have been approved or included. See `LICENSING.md` and
 `PREPARATION.md` before considering distribution.
