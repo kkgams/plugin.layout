@@ -14,6 +14,6 @@ The test directly invokes the transpiled component and checks initialization,
 resize, and invalid input handling. Build output is `dist/plugin.layout.wasm`.
 
 The owner approved Apache-2.0 for GAMS-authored code. The repository-specific
-third-party `NOTICE` and linked-code review still require owner approval before
-public source distribution. See `LICENSING.md`, `THIRD-PARTY-REVIEW.md`, and
+third-party `NOTICE` and linked-code inventory were reviewed by the owner;
+hosted Linux candidate evidence is still required before tagging. See `LICENSING.md`, `THIRD-PARTY-REVIEW.md`, and
 `PUBLISHING.md` for the fail-closed candidate/release process.
