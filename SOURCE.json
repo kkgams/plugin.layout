@@ -1,9 +1,4 @@
 {
-  "source_repository": "https://github.com/justgook/gamectl",
-  "source_base_revision": "01bbfb1cb07bca898b86e7127cf433d2d23aaf7e",
-  "snapshot_kind": "working-tree source snapshot; no history rewritten",
-  "source_worktree_status": [],
-  "repository": "plugin.layout",
   "files_sha256": {
     ".github/workflows/verify.yml": "391a2b65dd89044159fbe526629b03a04b04326b7e399058ce8dce1720dcbacc",
     ".gitignore": "12be7d69664589a1ea44ea4f46b2ea1924d33dac8c474a4f7d2778a8ee9201ea",
@@ -21,5 +16,165 @@
     "src/plugin.mk": "abd7804d6ee8f20e50a663a2d41829d090a3edc0299db86650542e2743ea2eb6",
     "src/wit/package.wit": "23442c7ec0f4a3ba810b4accf0520075de0ec32c5ee84d685c8b809f23c0daa7",
     "test/e2e.mjs": "d9882332e57d0c49aab45fd24113fb2fbaa46863996913ee3c4651274eae5df3"
-  }
+  },
+  "maintenance": {
+    "baseline_commit": "e9c2caca9b680412060b32670238bc8af072cb0f",
+    "blockers": [
+      "publication migration required: older direct GitHub Release creation lacks strict immutable-policy/draft/public verification",
+      "owner candidate/digest authorization and final locked builds/runtime/hosted linked-evidence review pending",
+      "historical SOURCE sparse coverage/drift requires provenance review; no complete legal certification"
+    ],
+    "changed_inputs": {
+      "PUBLISHING.md": {
+        "after": "c448c51386d4e6cd0a1d3324ad98553dfe2c7ecc70c784744c45e5a90eb8419c",
+        "before": "b8bed0fda5776784adcfc9e5edc0a57d58b7f3c01103299cec76571d20d7a631",
+        "rule": "insert prospective instructions after any frontmatter; entire historical text/URLs retained"
+      },
+      "README.md": {
+        "after": "4e4117c0c6a3f27258cbf2389f94cafe47407e4d41d656b208dc548b8d917b9b",
+        "before": "9bd079e02a936f3bdabfa213b51492fda2f4f2815f668e1349eca6cb87b4152c",
+        "rule": "insert prospective instructions after any frontmatter; entire historical text/URLs retained"
+      },
+      "flake.nix": {
+        "after": "3181819d3a27dca13103b82494cbce7d49e6427c73fd755a48344171ad501365",
+        "before": "2f30dd8606c1c1214471ee35639501f10f179b441a82acef030f84e8cba83a0a",
+        "rule": "own component description only; all toolchain pins preserved"
+      },
+      "version.txt": {
+        "after": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9",
+        "before": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67",
+        "rule": "canonical distribution version; not WIT or runtime harness"
+      }
+    },
+    "existing_license_authority": "requires clarification where contribution/authority bounds are unclear; no existing payload relicensed",
+    "historical_drift": {
+      ".github/workflows/verify.yml": {
+        "baseline": "036054db017f04cac59291c914870b8260044711262d11d4acdf47daab212e74",
+        "historical": "391a2b65dd89044159fbe526629b03a04b04326b7e399058ce8dce1720dcbacc"
+      },
+      ".gitignore": {
+        "baseline": "ae244871ccec4fa8d915b4ee432d71e85e108d3c3bc299e583308ead562cf200",
+        "historical": "12be7d69664589a1ea44ea4f46b2ea1924d33dac8c474a4f7d2778a8ee9201ea"
+      },
+      "LICENSING.md": {
+        "baseline": "c547a1af59ec311dfe87844e506f8bb4178d2d3869a510a9580a3f5925eed077",
+        "historical": "d4b79d8b9ed3c42813d51368fef1ce1f441948b217977ab839e10b23b0262318"
+      },
+      "Makefile": {
+        "baseline": "939a81b0d1ecdf3321fc061ca0f00f936cc832cbe0a75530d10b7f3999acbe38",
+        "historical": "28a29e84465a5b6b812e1e7f31169d018b395b3365604fb5cb18072616a9e0e7"
+      },
+      "PREPARATION.md": {
+        "baseline": "14894828abcb2ae12b1a41f39f157f8b99c2379e153e08af250e4ce7dae36466",
+        "historical": "dd9270285e0addcbeaf5b71b44c44fdf97a4a299c35ccfe75c3cc089f3ede969"
+      },
+      "README.md": {
+        "baseline": "9bd079e02a936f3bdabfa213b51492fda2f4f2815f668e1349eca6cb87b4152c",
+        "historical": "8c6e27d4ae5ea749033d49e486390861784e94b1d8cb9a3f229814120553ea9d"
+      },
+      "flake.lock": {
+        "baseline": "f4eeef56deb209afbca6947807cf700129c325ac9f6eb014ae44b0981b9238e2",
+        "historical": "3adbe3447e662145dd50a383489f62e7bfbe16996281e113b1fbac347eca3eae"
+      },
+      "flake.nix": {
+        "baseline": "2f30dd8606c1c1214471ee35639501f10f179b441a82acef030f84e8cba83a0a",
+        "historical": "e328a1bede7724d259433fa00dca985af8ad01e5a6be27e716b87f0d61467173"
+      }
+    },
+    "inventory": {
+      "baseline_files_sha256": {
+        ".github/workflows/release.yml": "556dadc2a34f78eb77352fbf97bc36701e2c9dbb2aad9c580bb38e6a934a34cd",
+        ".github/workflows/verify.yml": "036054db017f04cac59291c914870b8260044711262d11d4acdf47daab212e74",
+        ".gitignore": "ae244871ccec4fa8d915b4ee432d71e85e108d3c3bc299e583308ead562cf200",
+        "CONTEXT.md": "4aef08d1f41456cbfc2b711fea791df69652d0ad3317569c91230fba8167cf78",
+        "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "LICENSING.md": "c547a1af59ec311dfe87844e506f8bb4178d2d3869a510a9580a3f5925eed077",
+        "Makefile": "939a81b0d1ecdf3321fc061ca0f00f936cc832cbe0a75530d10b7f3999acbe38",
+        "NOTICE": "2539d4324c10bce39bec109b54e30b0b43d184cd6dff9ee6ff81e693685cbb63",
+        "PREPARATION.md": "14894828abcb2ae12b1a41f39f157f8b99c2379e153e08af250e4ce7dae36466",
+        "PUBLISHING.md": "b8bed0fda5776784adcfc9e5edc0a57d58b7f3c01103299cec76571d20d7a631",
+        "README.md": "9bd079e02a936f3bdabfa213b51492fda2f4f2815f668e1349eca6cb87b4152c",
+        "THIRD-PARTY-REVIEW.md": "cd5fcdfcd5bd8301290d6f8d17ddad6dfec846fc7cf9f7cf954b01623748fa73",
+        "config.mk": "841d90bc298f80221d5e24e1a2db128996f48795e6e6180d386992bf1b6f3a3f",
+        "flake.lock": "f4eeef56deb209afbca6947807cf700129c325ac9f6eb014ae44b0981b9238e2",
+        "flake.nix": "2f30dd8606c1c1214471ee35639501f10f179b441a82acef030f84e8cba83a0a",
+        "package-lock.json": "c9fc04d53f3fcc0bb23b7ee4ec109e70138f6955de98db551548182604c86115",
+        "package.json": "b5ed096a1567e97010770366cbf9f0949b91342ea886aa686025e2ec2ce54374",
+        "scripts/check-licensing-digests.sh": "0dfa34f834af2e065e8cbf325cc8eaf2beaf6dc60093f802466799c48d59ff21",
+        "scripts/check-release-absent.sh": "2cfdce1f2d47e41d4d24b2b138c707fa4a1ed5d5ed9c27a0a1f67067bca3d14d",
+        "scripts/check-release-metadata.sh": "668cd3102c9f368e8603adebb68c6547d21f7db2b658309657b9e92c105cea9f",
+        "scripts/record-build-evidence.sh": "10b2e645eeb2c252a7835f551c0bbee23c0de83e066f9f1e5328bae5baf65751",
+        "scripts/release-oci-preflight.sh": "38f265a1d111a8ca3bbd1db93fdd9c956d4b6a5dea9c88cd3f7be1a68b120d1f",
+        "scripts/stage-candidate.sh": "c06a158d6bdf9573bc9bd559afda34545de7ecae8e3de65a39eae4e5a7b16ab0",
+        "scripts/test-release-absent.sh": "84f260ffc50ca65be2a2fc5adde4f9e470780da675bd1ea39dc221561223b38d",
+        "scripts/test-release-oci-preflight.sh": "9039887cd64776aa558a3005693956140a91234471cf87bfb96f12306dd21b4a",
+        "scripts/wasm-notices.py": "91d94800f753ae948e9289393da9b6b63f6dc24e154a41fbdae2fd59f9305d85",
+        "src/component.c": "8df2e88528b655546dc4e4133924edb6c1bf063df90ede6a835e2c8e65b8fa6a",
+        "src/plugin.mk": "abd7804d6ee8f20e50a663a2d41829d090a3edc0299db86650542e2743ea2eb6",
+        "src/wit/package.wit": "23442c7ec0f4a3ba810b4accf0520075de0ec32c5ee84d685c8b809f23c0daa7",
+        "test/e2e.mjs": "d9882332e57d0c49aab45fd24113fb2fbaa46863996913ee3c4651274eae5df3",
+        "test/test_wasm_notices.py": "511a086b2e676e58272035276d285df8e77587905d6f2a739547294147d7c783",
+        "version.txt": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67"
+      },
+      "exclusions": {
+        ".git": "Git administrative data",
+        "SOURCE.json": "independent self-binding record"
+      },
+      "files_sha256": {
+        ".github/workflows/release.yml": "556dadc2a34f78eb77352fbf97bc36701e2c9dbb2aad9c580bb38e6a934a34cd",
+        ".github/workflows/verify.yml": "036054db017f04cac59291c914870b8260044711262d11d4acdf47daab212e74",
+        ".gitignore": "ae244871ccec4fa8d915b4ee432d71e85e108d3c3bc299e583308ead562cf200",
+        "CONTEXT.md": "4aef08d1f41456cbfc2b711fea791df69652d0ad3317569c91230fba8167cf78",
+        "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "LICENSING.md": "c547a1af59ec311dfe87844e506f8bb4178d2d3869a510a9580a3f5925eed077",
+        "Makefile": "939a81b0d1ecdf3321fc061ca0f00f936cc832cbe0a75530d10b7f3999acbe38",
+        "NOTICE": "2539d4324c10bce39bec109b54e30b0b43d184cd6dff9ee6ff81e693685cbb63",
+        "PREPARATION.md": "14894828abcb2ae12b1a41f39f157f8b99c2379e153e08af250e4ce7dae36466",
+        "PUBLISHING.md": "c448c51386d4e6cd0a1d3324ad98553dfe2c7ecc70c784744c45e5a90eb8419c",
+        "README.md": "4e4117c0c6a3f27258cbf2389f94cafe47407e4d41d656b208dc548b8d917b9b",
+        "THIRD-PARTY-REVIEW.md": "cd5fcdfcd5bd8301290d6f8d17ddad6dfec846fc7cf9f7cf954b01623748fa73",
+        "config.mk": "841d90bc298f80221d5e24e1a2db128996f48795e6e6180d386992bf1b6f3a3f",
+        "flake.lock": "f4eeef56deb209afbca6947807cf700129c325ac9f6eb014ae44b0981b9238e2",
+        "flake.nix": "3181819d3a27dca13103b82494cbce7d49e6427c73fd755a48344171ad501365",
+        "package-lock.json": "c9fc04d53f3fcc0bb23b7ee4ec109e70138f6955de98db551548182604c86115",
+        "package.json": "b5ed096a1567e97010770366cbf9f0949b91342ea886aa686025e2ec2ce54374",
+        "scripts/check-licensing-digests.sh": "0dfa34f834af2e065e8cbf325cc8eaf2beaf6dc60093f802466799c48d59ff21",
+        "scripts/check-release-absent.sh": "2cfdce1f2d47e41d4d24b2b138c707fa4a1ed5d5ed9c27a0a1f67067bca3d14d",
+        "scripts/check-release-metadata.sh": "668cd3102c9f368e8603adebb68c6547d21f7db2b658309657b9e92c105cea9f",
+        "scripts/record-build-evidence.sh": "10b2e645eeb2c252a7835f551c0bbee23c0de83e066f9f1e5328bae5baf65751",
+        "scripts/release-oci-preflight.sh": "38f265a1d111a8ca3bbd1db93fdd9c956d4b6a5dea9c88cd3f7be1a68b120d1f",
+        "scripts/stage-candidate.sh": "c06a158d6bdf9573bc9bd559afda34545de7ecae8e3de65a39eae4e5a7b16ab0",
+        "scripts/test-release-absent.sh": "84f260ffc50ca65be2a2fc5adde4f9e470780da675bd1ea39dc221561223b38d",
+        "scripts/test-release-oci-preflight.sh": "9039887cd64776aa558a3005693956140a91234471cf87bfb96f12306dd21b4a",
+        "scripts/wasm-notices.py": "91d94800f753ae948e9289393da9b6b63f6dc24e154a41fbdae2fd59f9305d85",
+        "src/component.c": "8df2e88528b655546dc4e4133924edb6c1bf063df90ede6a835e2c8e65b8fa6a",
+        "src/plugin.mk": "abd7804d6ee8f20e50a663a2d41829d090a3edc0299db86650542e2743ea2eb6",
+        "src/wit/package.wit": "23442c7ec0f4a3ba810b4accf0520075de0ec32c5ee84d685c8b809f23c0daa7",
+        "test/e2e.mjs": "d9882332e57d0c49aab45fd24113fb2fbaa46863996913ee3c4651274eae5df3",
+        "test/test_wasm_notices.py": "511a086b2e676e58272035276d285df8e77587905d6f2a739547294147d7c783",
+        "version.txt": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9"
+      },
+      "scope": "complete prepared source-only clone, not legal or linked-output certification"
+    },
+    "native_evidence": {
+      "binding": "Pinned native inventories do not bind distribution version fields; flake toolchain pins and all linked/source/runtime bytes unchanged.",
+      "reviewed_files_sha256": {
+        "NOTICE": "2539d4324c10bce39bec109b54e30b0b43d184cd6dff9ee6ff81e693685cbb63",
+        "THIRD-PARTY-REVIEW.md": "cd5fcdfcd5bd8301290d6f8d17ddad6dfec846fc7cf9f7cf954b01623748fa73"
+      },
+      "status": "historical native evidence preserved; final candidate relink/hosted review pending"
+    },
+    "new_recipe_license": "Apache-2.0",
+    "previous_source_sha256": "2796a213d2b39ca5f01dd31cba991014d5ea8587ff570bae43f173e65daae4a4",
+    "recipe": "packaging/ecosystem/coordinated_release/legacy_components.py:prepare",
+    "recipe_sha256": "7ca563813385652f1ba1a44069eb5d469e8804b8ea7b45295c5b4a2e69e4d5ce",
+    "release_ready": false,
+    "schema": 1,
+    "version": "0.2.0"
+  },
+  "repository": "plugin.layout",
+  "snapshot_kind": "working-tree source snapshot; no history rewritten",
+  "source_base_revision": "01bbfb1cb07bca898b86e7127cf433d2d23aaf7e",
+  "source_repository": "https://github.com/justgook/gamectl",
+  "source_worktree_status": []
 }
