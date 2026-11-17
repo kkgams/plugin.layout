@@ -5,6 +5,8 @@ SHELL := bash
 MAKEFLAGS += --no-builtin-rules --warn-undefined-variables
 .DEFAULT_GOAL := build
 
+component_compile_flags = -I$(1) -O2 -DNDEBUG
+
 WIT_BINDGEN ?= wit-bindgen
 WASM_TOOLS ?= wasm-tools
 WASI_P2_CC ?= wasm32-wasip2-clang
@@ -21,11 +23,13 @@ package: build.nosync/plugin.layout.wasm build.nosync/LICENSE build.nosync/NOTIC
 
 # Test compilation is independent from release packaging.
 define component_rules
-$(1)/plugin.layout.unstripped.wasm: src/component.c $(WIT_SOURCES) $(WIT_DIRS) Makefile flake.nix flake.lock | build.nosync/tmp
+$(1)/bindings/layout_plugin.c $(1)/bindings/layout_plugin.h $(1)/bindings/layout_plugin_component_type.o &: $(WIT_SOURCES) $(WIT_DIRS) Makefile flake.nix flake.lock | build.nosync/tmp
 	@rm -rf "$(1)/bindings"
 	@mkdir -p "$(1)/bindings"
 	@(cd "$(1)/bindings" && $(WIT_BINDGEN) c "$(abspath src/wit)" -w gams:layout/layout-plugin@1.0.0)
-	@$(WASI_P2_CC) -o "$$@" -mexec-model=reactor -I"$(1)/bindings" -O2 -DNDEBUG \
+
+$(1)/plugin.layout.unstripped.wasm: src/component.c $(1)/bindings/layout_plugin.c $(1)/bindings/layout_plugin.h $(1)/bindings/layout_plugin_component_type.o Makefile flake.nix flake.lock | build.nosync/tmp
+	@$(WASI_P2_CC) -o "$$@" -mexec-model=reactor $(call component_compile_flags,$(1)/bindings) \
 		"$(1)/bindings/layout_plugin.c" src/component.c \
 		"$(1)/bindings/layout_plugin_component_type.o" -Wl,--strip-all
 
@@ -99,3 +103,10 @@ $(WIKI_MAKEFILE): | build.nosync/tmp
 
 serve-docs validate-docs docs: $(WIKI_MAKEFILE) | build.nosync/tmp
 	$(MAKE) -f "$(WIKI_MAKEFILE)" "$(if $(filter docs,$@),build,$(patsubst %-docs,%,$@))" WIKI_REPOSITORY="$(WIKI_REPOSITORY)" WIKI_VERSION="$(WIKI_VERSION)" WIKI_ENGINE="$(WIKI_ENGINE)" WIKI_SOURCE="$(abspath docs)" WIKI_OUTPUT="$(abspath build.nosync/site)" PORT="$(DOCS_PORT)"
+
+.PHONY: compile_commands.json
+compile_commands.json: build.nosync/compile_commands.json
+
+build.nosync/compile_commands.json: Makefile flake.nix flake.lock scripts/compile-commands.py src/component.c build.nosync/bindings/layout_plugin.c build.nosync/bindings/layout_plugin.h $(wildcard src/*.h) | build.nosync/tmp
+	@$(PYTHON) scripts/compile-commands.py "$(WASI_P2_CC)" $(call component_compile_flags,build.nosync/bindings) -- build.nosync/bindings/layout_plugin.c src/component.c > "$@.tmp"
+	@mv "$@.tmp" "$@"

@@ -14,6 +14,7 @@ Install Nix; run native commands with `nix develop --command make <target>`. The
 
 | Command | Purpose |
 | --- | --- |
+| `make compile_commands.json` | Generate clangd inputs and required bindings only; run inside `nix develop`. `.clangd` uses disposable `build.nosync/`. |
 | `make build` | Compile the layout component under `build.nosync/`. |
 | `make package` | Build raw WASM, LICENSE, NOTICE and SHA256SUMS; unchanged output does no work. |
 | `make test` | Run native Cargo/Wasmtime initialization, resize and invalid-dimension assertions against a separate test component. |
